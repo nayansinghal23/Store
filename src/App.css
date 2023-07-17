@@ -90,3 +90,19 @@ button:hover {
   background-color: red;
   color: white;
 }
+
+.first {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-input {
+  border: 1px solid black;
+}
+
+.rating-btn {
+  width: 50px;
+  text-align: center;
+  font-size: medium;
+  height: auto;
+}

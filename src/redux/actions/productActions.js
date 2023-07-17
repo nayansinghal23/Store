@@ -20,3 +20,17 @@ export const selectedItemsCartFunctionality = (selectedItems) => {
     payload: selectedItems,
   };
 };
+
+export const ratedItemsFunctionality = (ratedItems) => {
+  return {
+    type: actionTypes.RATED_ITEMS,
+    payload: ratedItems,
+  };
+};
+
+export const checkForRatedItemsFunctionality = (rated) => {
+  return {
+    type: actionTypes.IS_RATED,
+    payload: rated,
+  };
+};
