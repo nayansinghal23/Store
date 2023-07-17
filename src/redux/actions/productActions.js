@@ -6,3 +6,17 @@ export const addProduct = (products) => {
     payload: products,
   };
 };
+
+export const cartFunctionality = (cart) => {
+  return {
+    type: actionTypes.CART,
+    payload: cart,
+  };
+};
+
+export const selectedItemsCartFunctionality = (selectedItems) => {
+  return {
+    type: actionTypes.SELECTED_ITEMS,
+    payload: selectedItems,
+  };
+};

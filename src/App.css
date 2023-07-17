@@ -12,6 +12,10 @@
   margin: 10px;
 }
 
+.cart:hover {
+  cursor: pointer;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -58,5 +62,11 @@ button {
 button:hover {
   cursor: pointer;
   background-color: black;
+  color: white;
+}
+
+.total-amount {
+  text-align: center;
+  background-color: red;
   color: white;
 }

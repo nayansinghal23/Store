@@ -4,14 +4,17 @@ import store from "./redux/store";
 import "./App.css";
 import Products from "./components/Products";
 import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import SelectedItems from "./components/SelectedItems";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Navbar />
-      <div>
-        <Products />
-      </div>
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/selectedItems" element={<SelectedItems />} />
+      </Routes>
     </Provider>
   );
 };

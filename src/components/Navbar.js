@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [items, setItems] = useState(0);
+  const cart = useSelector((state) => state.productReducers.cart);
+  const navigate = useNavigate();
+  const handleNavigaton = () => {
+    navigate("/selectedItems");
+  };
   return (
     <div className="navbar">
       <h3>Redux Store</h3>
-      <span>
+      <span className="cart" onClick={handleNavigaton}>
         <AiOutlineShoppingCart />
-        {items}
+        {cart}
       </span>
     </div>
   );
