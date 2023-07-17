@@ -4,6 +4,7 @@ import axios from "axios";
 import { addProduct } from "../redux/actions/productActions";
 import ProductCard from "./ProductCard";
 import Ratings from "./Ratings";
+import Categories from "./Categories";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const Products = () => {
     <div className="main">
       <div className="first">
         <Ratings />
+        <Categories />
       </div>
       {checkRated
         ? ratedProducts.map((product) => (

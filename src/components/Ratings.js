@@ -20,6 +20,7 @@ const Ratings = () => {
       }
     }
     dispatch(ratedItemsFunctionality(ratedProducts));
+    setRate("");
   };
   return (
     <div>
