@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
       <h2>{product.title}</h2>
       <div className="middle">
         <img src={product.image} alt="product" className="image" />
-        <p className="description">{product.description}</p>
+        <p className="description">{product.description.slice(0, 50)}...</p>
       </div>
       <p className="trio">
         <span>INR {product.price}</span>

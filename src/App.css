@@ -8,8 +8,22 @@
 
 .navbar {
   display: flex;
+  overflow: hidden;
+  top: 0;
   justify-content: space-between;
-  margin: 10px;
+  align-items: center;
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.main {
+  padding: 10px;
+  height: max-content;
+  margin-top: 50px;
 }
 
 .cart:hover {
@@ -19,9 +33,13 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: rgb(141, 170, 160);
+  height: 300px;
 }
 
 .middle {
@@ -34,6 +52,7 @@
 .image {
   width: 100px;
   height: 100px;
+  mix-blend-mode: multiply;
 }
 
 .description {
@@ -43,7 +62,7 @@
 .trio {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .buttons {
@@ -67,6 +86,7 @@ button:hover {
 
 .total-amount {
   text-align: center;
+  margin-top: 40px;
   background-color: red;
   color: white;
 }
