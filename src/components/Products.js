@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-import { addProduct } from "../redux/actions/productActions";
+import { fetchProducts } from "../redux/actions/productActions";
 import ProductCard from "./ProductCard";
 import Ratings from "./Ratings";
 import Categories from "./Categories";
@@ -15,12 +14,7 @@ const Products = () => {
   );
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get("https://fakestoreapi.com/products");
-      const data = await response.data;
-      dispatch(addProduct(data));
-    };
-    fetchData();
+    dispatch(fetchProducts());
   }, []);
 
   return (
