@@ -4,6 +4,7 @@ import { fetchProducts } from "../redux/actions/productActions";
 import ProductCard from "./ProductCard";
 import Ratings from "./Ratings";
 import Categories from "./Categories";
+import { motion } from "framer-motion";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,12 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="main">
+    <motion.div
+      className="main"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth }}
+    >
       <div className="first">
         <Ratings />
         <Categories />
@@ -30,7 +36,7 @@ const Products = () => {
         : products.map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
-    </div>
+    </motion.div>
   );
 };
 
